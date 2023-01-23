@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family: sans-serif;
+}
+
+p{
+  margin:0;
+  padding:0;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;*/
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*=====================================*/
+.innerContainer{
+  display:flex;
+  justify-content: center;
+  /*background-color: rgb(118, 118, 122);*/
+}
+
+.popup{
+  margin-top:20px;
+  width:350px;
+  height:115px; 
+  background-color: rgb(230, 229, 229);
+  border-radius: 20px;
+}
+
+.innerPopup{
+  text-align:left;
+  margin-left:20px;
+  margin-top:20px;
+  font-size:15px;
+  color:black;
+  /*background-color: rgb(211, 205, 205);*/
+}
+
+.innerContainerTwo{
+  display:flex;
+  justify-content: flex-start;
+  margin-top:5px;
+  /*background-color: rgb(112, 112, 201);*/
+}
+
+.location{
+  font-size:15px;
+  color:grey;
+  margin-right:9px;
+}
+
+.date{
+  font-size:15px;
+  color:grey;
+}
+
+.innerContainerThree{
+  display:flex;
+  justify-content: space-evenly;
+  margin-top:30px;
+  /*background-color: rgb(112, 112, 201);*/
+}
+
+.innerContainerFour{
+  text-align:left;
+  margin-top:30px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding-top:20px;
+  padding-bottom:20px;
+  /*background-color:red;*/
+}
+
+.innerContainerFive{
+  text-align:left;
+  border-bottom: 1px solid grey;
+  padding-top:20px;
+  padding-bottom:20px;
+  /*background-color:red;*/
+  }
+
+
+.security{
+  font-size:13px;
+}
+
+
+/*=====================================*/
+.scanlicenseArrow{
+  text-align:left;
+  padding-top:20px;
+  margin-left:-5px;
+  font-size:38px;
+}
+
+.scanlicenseTextAll{
+  text-align:left;
+}
+
+.scanlicensePara{
+  color:grey;
+  font-size: 14px;
+}
+
+.photobox{
+  width:355px;
+  height:200px; 
+  margin:20px auto;
+  background-color:#464746; 
+  border-radius:5px;
+  border:1px solid #a9aba9;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+
+.photobox-two .camera{
+  background-color:#3887fc;
+  width:40px;
+  height:40px;
+  margin:auto;
+  border-radius: 50px;
+
+}
+
+.camera{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photobox-two .photobox-two-child{
+  margin-top:10px;
+  font-size:14px;
+}
+
+.licensebox{
+  width:355px;
+  height:50px; 
+  margin:40px auto;
+  background-color:#3d3d3d; 
+  border-radius:5px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.licensebox p{
+  font-size:14px;
+}
+
+/*=========================================*/
+
+.imagecontainer{
+  position:relative;
+  /*background-color:red;*/
+  width:350px;
+  height:690px;
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.idcontainer{
+  position:absolute;
+  border-radius: 20px;
+  width:310px;
+  height:220px; 
+  /*background-color:grey;*/
+}
+
+.textcontainer{
+  position:absolute;
+  width:300px;
+  height:200px; 
+  /*background-color:rgb(172, 146, 146);*/
+  margin-top:420px;
+}
+
+/*.boxoverlay{
+  width:100vw;
+  height:100vh; 
+  background-color:#464746; 
+ 
+  border:1px solid #a9aba9;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}*/
