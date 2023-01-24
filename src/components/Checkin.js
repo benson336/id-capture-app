@@ -69,10 +69,17 @@ export default function Checkin(props) {
 
                 <div className="innerContainerFive">
                     <div className="driver">
-                        <p><strong>Driver Check-in | LE64135</strong></p>
+                        <p><strong>Driver Check-in | LE64136</strong></p>
                     </div>
                     <div className="security">
                         <p><span style={{color:"red"}}><i class="bi bi-circle-fill"></i> Alert - possible security threat</span><span style={{color:"grey"}}> (1 min ago)</span></p>
+                    </div>
+                </div>
+
+
+                <div className="innerContainerFive">
+                    <div className="driver">
+                        <p><strong></strong></p>
                     </div>
                 </div>
 
@@ -85,6 +92,7 @@ export default function Checkin(props) {
                     </div>
                 </div>
                 
+
             </div>
 
             

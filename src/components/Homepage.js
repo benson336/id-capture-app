@@ -2,6 +2,7 @@ import React, { Component, useState } from 'react'
 import Scanlicense from './Scanlicense'
 import Takephoto from './Takephoto'
 import Checkin from './Checkin'
+import Showphoto from './Showphoto'
 //import Confirm from './Confirm'
 //import Success from './Success'
 
@@ -57,10 +58,14 @@ export default function Homepage() {
                 values={state}
                 />
             )
-        /*case 4:
+        case 4:
             return (
-                <Success />
-            )*/
+                <Showphoto
+                nextStep={nextStep}
+                prevStep={prevStep}
+                values={state}
+                />
+            )
 
         default:
             return <h1>default</h1>

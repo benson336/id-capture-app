@@ -206,8 +206,8 @@ p{
 .idcontainer{
   position:absolute;
   border-radius: 20px;
-  width:310px;
-  height:220px; 
+  /*width:310px;
+  height:220px;
   /*background-color:grey;*/
 }
 

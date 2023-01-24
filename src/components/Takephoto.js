@@ -1,6 +1,7 @@
 import React, { Component, useCallback, useRef, useState  } from 'react'
 import Webcam from "react-webcam";
 import axios, { Axios } from 'axios';
+import Showphoto from './Showphoto';
 
 
 export default function Takephoto(props) {
@@ -14,11 +15,11 @@ export default function Takephoto(props) {
       };
 
     const webcamRef = React.useRef(null);
-    const capture = React.useCallback(() => {
+    const capturePhoto = React.useCallback(() => {
         const imageSrc = webcamRef.current.getScreenshot();
         setImg(imageSrc);
-        console.log(imageSrc);
-        let senddata = {
+        
+        /*let senddata = {
             "apiKey":"HqzOCmIYgYk8h8cU4ohwyTfDNUaNmb6I",
             "file_base64":imageSrc,
             "authenticate":"true",
@@ -26,14 +27,17 @@ export default function Takephoto(props) {
             "verify_expiry":"true",
         };
 
+        console.log(senddata);
+
         axios.request({
             url: "https://api.idanalyzer.com",
 			method: "POST",
+            crossDomain: true,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             data: senddata
         }).then(function(response){
             console.log(response.data);
-        })
+        })*/
 
     },[webcamRef]);
   
@@ -41,12 +45,17 @@ export default function Takephoto(props) {
     const conTinue = (e) => {
         e.preventDefault();
         props.nextStep();
+        
     }
 
     const preVious = (e) => {
         e.preventDefault();
         props.prevStep();
     }
+
+    /*console.log({
+        ...img
+    })*/
 
     return (      
         <>
@@ -66,8 +75,10 @@ export default function Takephoto(props) {
                     style={{border:"3px solid #1d8fdb", opacity:"0.3"}}/>
                     
                     <div className="idcontainer">
+                        {img === null ? 
+                        (
                             <Webcam
-                            style={{borderRadius: "8px", borderRadius:"35px"}}
+                            style={{borderRadius: "8px"}}
                             audio={false}
                             width={310}
                             height={220}
@@ -75,22 +86,31 @@ export default function Takephoto(props) {
                             screenshotFormat="image/jpeg"
                             videoConstraints={videoConstraints}
                             />
+                        ) : (
+                            <img src={img} alt="screenshot" />
+                        )
+                        
+                        }
                     </div>
 
                     <div className="textcontainer">
                         <h5>Take picture of driver's license</h5>
                         <p style={{fontSize:"12px"}}>Please align ID inside above area and take picture</p>
-                        <div style={{marginTop:"35px", fontSize:"80px"}}>
+                        <div style={{marginTop:"35px", fontSize:"80px"}} onClick={capturePhoto}>
                             <i className="bi bi-record-circle"></i>
                         </div>
                         
                     </div>
 
-                    
-
-                   
-                
                 </div> 
+
+                <div style={{marginTop:"242px"}}>
+                    <div className="d-grid gap-2">
+                        <button className="btn btn-primary" type="submit" value="Continue" onClick={conTinue}>
+                            <strong>NEXT</strong>
+                        </button>
+                    </div>
+                </div>
 
 
             </div> 
