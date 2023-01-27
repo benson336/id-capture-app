@@ -9,8 +9,8 @@ export default function Takephoto(props) {
     const [img, setImg] = useState(null);
     
     const videoConstraints = {
-        width: 1280,
-        height: 720,
+        width: 1900,
+        height: 1200,
         facingMode: "user"
       };
 
@@ -18,8 +18,8 @@ export default function Takephoto(props) {
     const capturePhoto = React.useCallback(() => {
         const imageSrc = webcamRef.current.getScreenshot();
         setImg(imageSrc);
-        
-        /*let senddata = {
+        //console.log(imageSrc);
+        let senddata = {
             "apiKey":"HqzOCmIYgYk8h8cU4ohwyTfDNUaNmb6I",
             "file_base64":imageSrc,
             "authenticate":"true",
@@ -37,15 +37,15 @@ export default function Takephoto(props) {
             data: senddata
         }).then(function(response){
             console.log(response.data);
-        })*/
+        })
 
     },[webcamRef]);
   
 
     const conTinue = (e) => {
         e.preventDefault();
-        props.nextStep();
-        
+        //props.nextStep();
+        props.storeImg(img);
     }
 
     const preVious = (e) => {
@@ -104,7 +104,7 @@ export default function Takephoto(props) {
 
                 </div> 
 
-                <div style={{marginTop:"242px"}}>
+                <div style={{marginTop:"10px"}}>
                     <div className="d-grid gap-2">
                         <button className="btn btn-primary" type="submit" value="Continue" onClick={conTinue}>
                             <strong>NEXT</strong>

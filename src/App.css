@@ -229,3 +229,34 @@ p{
   justify-content:center;
   align-items:center;
 }*/
+
+/*========================================*/
+.scanInfo{
+  margin-top:40px;
+  text-align:left;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.idBox{
+  width:355px;
+  height:100px; 
+  margin:10px auto;
+  background-color:#3d3d3d; 
+  border-radius:5px;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+.idBox p{
+  font-size:14px;
+}
+
+.idBoxTwo{
+  display:flex;
+  justify-content:start;
+  align-items:center;
+}
+

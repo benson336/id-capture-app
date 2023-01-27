@@ -16,6 +16,8 @@ export default function Showphoto(props) {
         props.prevStep();
     }
 
+    console.log(props.values)
+
     return (      
         <>
             <div className="container">
@@ -27,26 +29,58 @@ export default function Showphoto(props) {
                 <div className="scanlicenseTextAll">
                     <h3>Driver's License</h3>
                     <div className="scanlicensePara">
-                        <p>Check and confirm that the scanned license plate matches the real one.
-                            If the plates don't match, manually enter the correct number.
+                        <p>Ask driver for driver's license and take a photo to collect information.
                         </p>
                     </div>
                 </div>
 
                 <div className="photobox">
                     <div className="photobox-two">
-                        <div className="camera" onClick={conTinue}>
-                            <i className="bi bi-camera"></i>
-                        </div>
-                        <p className="photobox-two-child"><strong>Scanning in progress..</strong></p>
+                    <img src={props.values.photo} alt="screenshot" />
                     </div>
                 </div>
 
-                <div className="licensebox">
-                    <p>TP64102</p>
+                <div onClick={preVious}>
+                    <p style={{fontSize:"15px", color:"#3887fc"}}>
+                        <strong>RETAKE</strong>
+                    </p>
                 </div>
 
-                <div style={{marginTop:"250px"}}>
+                <div className="scanInfo">
+                    <h6>Scanned Information</h6>
+                    <p style={{fontSize: "15px", color:"#3887fc"}}><strong>Edit</strong></p>
+                </div>
+
+                <div class="idBox">
+                    <div class="idBoxTwo">
+                        <div style={{width:"70px", height:"70px", backgroundColor:"#42c8f5", paddingTop:"20px"}}>
+                            <i class="bi bi-person-bounding-box"></i>
+                        </div>
+                    </div>
+                    <div class="idBoxThree">
+                        <div>
+                            <p style={{fontSize:"12px", color:"grey"}}>Last</p>
+                            <p style={{fontSize:"14px"}}>Wen</p>
+                        </div>
+                        <div>
+                            <p style={{fontSize:"12px", color:"grey"}}>DOB</p>
+                            <p style={{fontSize:"14px"}}>02/03/1999</p>
+                        </div>
+                    </div>
+                    <div class="idBoxFour">
+                        <div>
+                            <p style={{fontSize:"12px", color:"grey"}}>First</p>
+                            <p style={{fontSize:"14px"}}>Chaopin</p>
+                        </div>
+                        <div>
+                            <p style={{fontSize:"12px", color:"grey"}}>DL</p>
+                            <p style={{fontSize:"14px"}}>#123455</p>
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <div style={{marginTop:"150px"}}>
                     <div className="d-grid gap-2">
                         <button className="btn btn-primary" type="submit" value="Continue" onClick={conTinue}>
                             <strong>NEXT</strong>

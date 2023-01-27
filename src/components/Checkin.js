@@ -49,7 +49,7 @@ export default function Checkin(props) {
                     </div>
                 </div>
 
-                <div className="innerContainerFour">
+                <div className="innerContainerFour" onClick={conTinue}>
                     <div className="driver">
                         <p><strong>Driver Check-in | YP64102</strong></p>
                     </div>
@@ -58,7 +58,7 @@ export default function Checkin(props) {
                     </div>
                 </div>
 
-                <div className="innerContainerFive">
+                <div className="innerContainerFive" onClick={conTinue}>
                     <div className="driver">
                         <p><strong>Driver Check-in | BR64474</strong></p>
                     </div>
@@ -67,7 +67,7 @@ export default function Checkin(props) {
                     </div>
                 </div>
 
-                <div className="innerContainerFive">
+                <div className="innerContainerFive" onClick={conTinue}>
                     <div className="driver">
                         <p><strong>Driver Check-in | LE64136</strong></p>
                     </div>
@@ -84,13 +84,13 @@ export default function Checkin(props) {
                 </div>
 
 
-                <div style={{marginTop:"242px"}}>
+                {/*<div style={{marginTop:"200px"}}>
                     <div className="d-grid gap-2">
                         <button className="btn btn-primary" type="submit" value="Continue" onClick={conTinue}>
                             <strong>NEXT</strong>
                         </button>
                     </div>
-                </div>
+                </div>*/}
                 
 
             </div>

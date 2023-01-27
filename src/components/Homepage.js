@@ -10,26 +10,39 @@ export default function Homepage() {
 
     const [state, setState] = useState({
         step:1,
-        
+        photo:"",
     });
 
     const nextStep = () => {
-        const { step } =  state;
         setState({
-            step: step + 1
+            ...state,
+            step: state.step + 1
         });
     }
 
      const prevStep = () => {
-        const { step } =  state;
         setState({
-            step: step - 1
+            ...state,
+            step: state.step - 1
         });
     }
 
-    const handleChange = (e) => {
-        setState({[e.target.name]: e.target.value})
+    const storeImg = (img) => {
+        //console.log(img);
+        setState({
+            ...state,
+            step: state.step + 1,
+            photo: img,
+        });
     }
+
+    /*const handleChange = (e) => {
+        setState({[e.target.name]: e.target.value})
+    }*/
+
+    console.log({
+        ...state
+    });
     
 
     switch(state.step){
@@ -37,8 +50,8 @@ export default function Homepage() {
             return (
                 <Checkin
                 nextStep={nextStep}
-                handleChange={handleChange}
                 values={state}
+                //handleChange={handleChange}
                 />
             )
         case 2:
@@ -46,8 +59,8 @@ export default function Homepage() {
                 <Scanlicense
                 nextStep={nextStep}
                 prevStep={prevStep}
-                handleChange={handleChange}
                 values={state}
+                //handleChange={handleChange}
                 />
             )
         case 3:
@@ -55,6 +68,7 @@ export default function Homepage() {
                 <Takephoto
                 nextStep={nextStep}
                 prevStep={prevStep}
+                storeImg={storeImg}
                 values={state}
                 />
             )
@@ -68,7 +82,7 @@ export default function Homepage() {
             )
 
         default:
-            return <h1>default</h1>
+            return <h1>Default Page</h1>
     }
 }
 
