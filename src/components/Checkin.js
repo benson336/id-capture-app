@@ -77,13 +77,6 @@ export default function Checkin(props) {
                 </div>
 
 
-                <div className="innerContainerFive">
-                    <div className="driver">
-                        <p><strong></strong></p>
-                    </div>
-                </div>
-
-
                 {/*<div style={{marginTop:"200px"}}>
                     <div className="d-grid gap-2">
                         <button className="btn btn-primary" type="submit" value="Continue" onClick={conTinue}>

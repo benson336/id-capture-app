@@ -93,6 +93,11 @@ export default function Showphoto(props) {
                         <strong>ENTER MANUALLY INSTEAD</strong>
                     </p>
                 </div>*/}
+
+                {/*
+                <p style={{fontSize:"14px", color:"#3887fc"}}>
+                    <button className="btn "
+                </p>*/}
             </div>
         </>
     )

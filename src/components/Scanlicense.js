@@ -44,6 +44,7 @@ export default function Scanlicense(props) {
                     <div className="photobox-two">
                         <div className="camera" onClick={conTinue}>
                             {/*<i className="bi bi-camera"></i>*/}
+                            
                             <img src="plate.jpg" width="700" height="190"/>
                         </div>
                         {/*<p className="photobox-two-child"><strong>Scanning in progress..</strong></p>*/}

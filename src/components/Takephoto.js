@@ -18,25 +18,33 @@ export default function Takephoto(props) {
     const capturePhoto = React.useCallback(() => {
         const imageSrc = webcamRef.current.getScreenshot();
         setImg(imageSrc);
-        //console.log(imageSrc);
+        console.log(imageSrc);
         let senddata = {
-            "apiKey":"HqzOCmIYgYk8h8cU4ohwyTfDNUaNmb6I",
-            "file_base64":imageSrc,
-            "authenticate":"true",
-            "authenticate_module":"2",
-            "verify_expiry":"true",
+            apikey:"5RKBVLYJdo4MU4dydKeR4cum85YZYDF3",
+            file_base64:imageSrc,
+            authenticate:true,
+            accuracy:1,
+            authenticate_module:2,
+            ocr_scaledown:1000,
+            disable_barcode: true,
+            verify_expiry:true,
+            verify_name:true,
         };
-
-        console.log(senddata);
 
         axios.request({
             url: "https://api.idanalyzer.com",
 			method: "POST",
-            crossDomain: true,
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            data: senddata
+			dataType: "json",
+			crossDomain: true,
+			headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+			contentType: "application/json; charset=utf-8",
+			data: senddata,
+			cache: false,
         }).then(function(response){
-            console.log(response.data);
+            if(response.data.error.message){
+                
+
+            }
         })
 
     },[webcamRef]);
@@ -112,7 +120,6 @@ export default function Takephoto(props) {
                     </div>
                 </div>
 
-
             </div> 
         </div>
         </>
@@ -149,3 +156,25 @@ export default function Takephoto(props) {
                         </div>
                     </>
                 )}*/}
+
+
+                //post base64 image to api to verify dl
+
+
+
+    /*function createPost(){
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve();
+            }, 2000);
+        });
+    };
+        
+
+    async function init(){
+        await createPost({title:'one', body:'two'});
+        getPost();
+    }
+
+    init();*/
+

@@ -56,7 +56,7 @@ p{
 .innerContainer{
   display:flex;
   justify-content: center;
-  /*background-color: rgb(118, 118, 122);*/
+  background-color: rgb(118, 118, 122);
 }
 
 .popup{
